@@ -8,7 +8,6 @@ namespace LabbassCentral
 {
     public interface ILab
     {
-        void TODODeleteThis();
         void Show();
         event EventHandler Shown;
     }
