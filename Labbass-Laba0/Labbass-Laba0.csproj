@@ -43,8 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssemblyInformationAttribute.cs" />
-    <Compile Include="Lab.cs" />
+    <Compile Include="Models\Lab.cs" />
     <Compile Include="LabForm.cs">
       <SubType>Form</SubType>
     </Compile>
