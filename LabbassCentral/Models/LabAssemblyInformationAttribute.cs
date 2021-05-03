@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace Labbass_Laba0
+namespace LabbassCentral
 {
     [System.AttributeUsage(AttributeTargets.Assembly, Inherited = false, AllowMultiple = false)]
-    sealed class LabAssemblyInformationAttribute : Attribute
+    public class LabAssemblyInformationAttribute : Attribute
     {
         readonly string labID;
         readonly string labName;

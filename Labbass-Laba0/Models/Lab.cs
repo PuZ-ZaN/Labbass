@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 using LabbassCentral;
+
+[assembly: LabAssemblyInformation("0", "Лаба 0 Штангенциркуль")]
 namespace Labbass_Laba0
 {
 
@@ -28,7 +27,9 @@ namespace Labbass_Laba0
 
         public void Show()
         {
-            throw new NotImplementedException();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run();
         }
 
         public override string ToString()
