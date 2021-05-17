@@ -49,12 +49,10 @@ namespace LabbassCentral
             //TODO: Вынести в метод, добавить проверки на null, переделать год(в)нокод короче
             var labSelectedName = listBox1.SelectedItem?.ToString();
             if (labSelectedName == null) return;
-            var currentAssembly = assemblies.Where(assembly => assembly.
-                GetCustomAttribute<LabAssemblyInformationAttribute>().
-                LabName == labSelectedName).FirstOrDefault();
-            var name = currentAssembly.DefinedTypes.Where(typeInfo => typeInfo.Name == "Lab").FirstOrDefault().FullName;
-            var labInstance = (ILab)Activator.CreateInstance(currentAssembly.GetType(name));
-            var LabThread = new Thread(a => labInstance.Show());
+            var currentAssembly = assemblies.Where(assembly => assembly.GetCustomAttribute<LabAssemblyInformationAttribute>().LabName == labSelectedName).FirstOrDefault();
+            var name = currentAssembly.DefinedTypes.Where(typeInfo => typeInfo.Name == "Lab").FirstOrDefault().FullName;//FullName!="Lab"
+            var labInstance = currentAssembly.CreateInstance(name) as ILab;
+            var LabThread = new Thread(() => labInstance.Show());
             this.WindowState = FormWindowState.Minimized;
             LabThread.Start();
             LabThread.Join();

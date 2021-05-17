@@ -29,7 +29,7 @@ namespace Labbass_Laba0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run();
+            Application.Run(new LabForm());
         }
 
         public override string ToString()
