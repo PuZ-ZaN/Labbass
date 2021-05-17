@@ -24,7 +24,7 @@ namespace Labbass_Laba0
         {
             return base.GetHashCode();
         }
-
+        [STAThread]
         public void Show()
         {
             Application.EnableVisualStyles();

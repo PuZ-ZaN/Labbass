@@ -28,7 +28,15 @@ namespace LabbassCentral
             assemblies = new List<Assembly>();
             foreach (var assembly in LoadAssemblies())
             {
-                listBox1.Items.Add(assembly.GetCustomAttribute<LabAssemblyInformationAttribute>().LabName);
+                //TODO: костыль, нужно что то типа assembly.CustomAttributes.Where(attr => attr.Type is LabAssemblyInformationAttributes)
+                try
+                {
+                    listBox1.Items.Add(assembly.GetCustomAttribute<LabAssemblyInformationAttribute>()?.LabName);
+                }
+                catch (Exception ex){
+                    continue;
+                }
+                
                 assemblies.Add(assembly);
                 labCounter++;
             }
@@ -54,6 +62,7 @@ namespace LabbassCentral
             var labInstance = currentAssembly.CreateInstance(name) as ILab;
             var LabThread = new Thread(() => labInstance.Show());
             this.WindowState = FormWindowState.Minimized;
+            LabThread.SetApartmentState(ApartmentState.STA);
             LabThread.Start();
             LabThread.Join();
             this.WindowState = FormWindowState.Normal;
