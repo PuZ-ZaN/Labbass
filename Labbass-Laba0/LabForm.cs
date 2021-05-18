@@ -4,7 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -52,6 +54,38 @@ namespace Labbass_Laba0
             shtang.MakeTransparent(Color.White);
             MovableFrame.Image = shtang;
             MovableFrame.SizeMode = PictureBoxSizeMode.Zoom;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.pdfViewer1.LoadFromStream(new MemoryStream(Resources.shtang));
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.pdfViewer1.LoadFromStream(new MemoryStream(Resources.micr));
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.pdfViewer1.LoadFromStream(new MemoryStream(Resources.metod));
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.pdfViewer1.LoadFromStream(new MemoryStream(Resources.otchet_form));
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "PDF файлы(*.pdf) | *.pdf | Все файлы(*.*) | *.* ";
+            saveFileDialog.DefaultExt = "pdf";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                File.WriteAllBytes(saveFileDialog.FileName, Resources.otchet_form);
+                Process.Start(Path.GetDirectoryName(saveFileDialog.FileName));
+            }
         }
     }
 }

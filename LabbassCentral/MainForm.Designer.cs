@@ -33,14 +33,12 @@ namespace LabbassCentral
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(302, 20);
+            this.label1.Location = new System.Drawing.Point(141, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(178, 13);
             this.label1.TabIndex = 0;
@@ -57,47 +55,34 @@ namespace LabbassCentral
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(538, 219);
+            this.label2.Location = new System.Drawing.Point(345, 211);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(203, 13);
+            this.label2.Size = new System.Drawing.Size(159, 32);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Кликните на лабу чтобы перейти к ней";
+            this.label2.Text = "Кликните на лаборатроную работу чтобы перейти к ней";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(355, 315);
+            this.button1.Location = new System.Drawing.Point(12, 41);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(125, 23);
             this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
+            this.button1.Text = "Обновить список";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(345, 190);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(178, 93);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(511, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Name = "MainForm";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,7 +93,6 @@ namespace LabbassCentral
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
     }
 }

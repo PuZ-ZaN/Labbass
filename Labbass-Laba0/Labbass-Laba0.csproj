@@ -34,6 +34,18 @@
     <Reference Include="Control.Draggable, Version=1.0.5049.269, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Control.Draggable.1.0.5049.269\lib\net35-Client\Control.Draggable.dll</HintPath>
     </Reference>
+    <Reference Include="Spire.License, Version=1.3.8.46, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDFViewer.6.3.2\lib\net46\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=7.3.3.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDFViewer.6.3.2\lib\net46\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Asp, Version=6.3.2.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDFViewer.6.3.2\lib\net46\Spire.PdfViewer.Asp.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.PdfViewer.Forms, Version=6.3.2.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.PDFViewer.6.3.2\lib\net46\Spire.PdfViewer.Forms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -77,6 +89,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Resources\metod.pdf" />
+    <None Include="Resources\micr.pdf" />
+    <None Include="Resources\otchet_form.pdf" />
+    <None Include="Resources\shtang.pdf" />
     <None Include="Resources\штангенциркуль осн2.png" />
   </ItemGroup>
   <ItemGroup>

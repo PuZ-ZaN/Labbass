@@ -61,6 +61,46 @@ namespace Labbass_Laba0.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] metod {
+            get {
+                object obj = ResourceManager.GetObject("metod", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] micr {
+            get {
+                object obj = ResourceManager.GetObject("micr", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] otchet_form {
+            get {
+                object obj = ResourceManager.GetObject("otchet_form", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] shtang {
+            get {
+                object obj = ResourceManager.GetObject("shtang", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap груз2 {

@@ -19,9 +19,14 @@ namespace LabbassCentral
         public MainForm()
         {
             InitializeComponent();
+            UpdateLabsList();
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            UpdateLabsList();
+        }
+        public void UpdateLabsList()
         {
             listBox1.Items.Clear();
             int labCounter = 0;
@@ -33,10 +38,11 @@ namespace LabbassCentral
                 {
                     listBox1.Items.Add(assembly.GetCustomAttribute<LabAssemblyInformationAttribute>()?.LabName);
                 }
-                catch (Exception ex){
+                catch (Exception ex)
+                {
                     continue;
                 }
-                
+
                 assemblies.Add(assembly);
                 labCounter++;
             }
@@ -54,7 +60,10 @@ namespace LabbassCentral
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //TODO: Вынести в метод, добавить проверки на null, переделать год(в)нокод короче
+            RunLab();
+        }
+        private void RunLab()
+        {
             var labSelectedName = listBox1.SelectedItem?.ToString();
             if (labSelectedName == null) return;
             var currentAssembly = assemblies.Where(assembly => assembly.GetCustomAttribute<LabAssemblyInformationAttribute>().LabName == labSelectedName).FirstOrDefault();
