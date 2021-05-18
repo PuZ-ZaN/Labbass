@@ -33,15 +33,15 @@ namespace Labbass_Laba0
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.MeasuringObject = new System.Windows.Forms.PictureBox();
+            this.MovableFrame = new System.Windows.Forms.PictureBox();
+            this.StaticFrame = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MeasuringObject)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MovableFrame)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StaticFrame)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -58,7 +58,7 @@ namespace Labbass_Laba0
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(1, 1);
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(797, 408);
@@ -66,10 +66,10 @@ namespace Labbass_Laba0
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.pictureBox2);
-            this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Controls.Add(this.pictureBox3);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.MeasuringObject);
+            this.tabPage1.Controls.Add(this.MovableFrame);
+            this.tabPage1.Controls.Add(this.StaticFrame);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -88,51 +88,48 @@ namespace Labbass_Laba0
             this.tabPage2.Text = "Микрометр";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // MeasuringObject
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Image = global::Labbass_Laba0.Properties.Resources.штангенциркуль2;
-            this.pictureBox1.Location = new System.Drawing.Point(281, 63);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(138, 199);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.MeasuringObject.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.MeasuringObject.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MeasuringObject.Image = global::Labbass_Laba0.Properties.Resources.груз2;
+            this.MeasuringObject.Location = new System.Drawing.Point(21, 286);
+            this.MeasuringObject.Name = "MeasuringObject";
+            this.MeasuringObject.Size = new System.Drawing.Size(90, 51);
+            this.MeasuringObject.TabIndex = 7;
+            this.MeasuringObject.TabStop = false;
             // 
-            // pictureBox3
+            // MovableFrame
             // 
-            this.pictureBox3.BackgroundImage = global::Labbass_Laba0.Properties.Resources.штангенциркуль_осн2;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox3.Location = new System.Drawing.Point(28, 25);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(554, 274);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.MovableFrame.BackColor = System.Drawing.Color.Transparent;
+            this.MovableFrame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.MovableFrame.Cursor = System.Windows.Forms.Cursors.Default;
+            this.MovableFrame.Image = global::Labbass_Laba0.Properties.Resources.штангенциркуль21;
+            this.MovableFrame.Location = new System.Drawing.Point(388, 59);
+            this.MovableFrame.Name = "MovableFrame";
+            this.MovableFrame.Size = new System.Drawing.Size(186, 256);
+            this.MovableFrame.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.MovableFrame.TabIndex = 3;
+            this.MovableFrame.TabStop = false;
             // 
-            // panel1
+            // StaticFrame
             // 
-            this.panel1.AllowDrop = true;
-            this.panel1.Location = new System.Drawing.Point(155, 253);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(120, 28);
-            this.panel1.TabIndex = 4;
-            this.panel1.DragDrop += new System.Windows.Forms.DragEventHandler(this.panel1_DragDrop);
-            this.panel1.DragEnter += new System.Windows.Forms.DragEventHandler(this.panel1_DragEnter);
-            this.panel1.DragOver += new System.Windows.Forms.DragEventHandler(this.panel1_DragOver);
-            this.panel1.DragLeave += new System.EventHandler(this.panel1_DragLeave);
+            this.StaticFrame.BackgroundImage = global::Labbass_Laba0.Properties.Resources.штангенциркуль_осн2;
+            this.StaticFrame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.StaticFrame.Location = new System.Drawing.Point(0, 19);
+            this.StaticFrame.Name = "StaticFrame";
+            this.StaticFrame.Size = new System.Drawing.Size(783, 360);
+            this.StaticFrame.TabIndex = 2;
+            this.StaticFrame.TabStop = false;
             // 
-            // pictureBox2
+            // label1
             // 
-            this.pictureBox2.BackgroundImage = global::Labbass_Laba0.Properties.Resources.груз2;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(498, 252);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(49, 29);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(625, 343);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "A, D - перемещение рамки";
             // 
             // LabForm
             // 
@@ -148,9 +145,10 @@ namespace Labbass_Laba0
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LabForm_KeyDown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MeasuringObject)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MovableFrame)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StaticFrame)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -160,9 +158,9 @@ namespace Labbass_Laba0
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox MovableFrame;
+        private System.Windows.Forms.PictureBox StaticFrame;
+        private System.Windows.Forms.PictureBox MeasuringObject;
+        private System.Windows.Forms.Label label1;
     }
 }
