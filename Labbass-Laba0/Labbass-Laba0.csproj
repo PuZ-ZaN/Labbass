@@ -101,5 +101,17 @@
   <ItemGroup>
     <None Include="Resources\груз2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\микрометр осн3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\микрометр3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Штырь.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\итог3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

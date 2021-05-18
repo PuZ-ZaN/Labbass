@@ -113,6 +113,36 @@ namespace Labbass_Laba0.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap итог3 {
+            get {
+                object obj = ResourceManager.GetObject("итог3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap микрометр_осн3 {
+            get {
+                object obj = ResourceManager.GetObject("микрометр_осн3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap микрометр3 {
+            get {
+                object obj = ResourceManager.GetObject("микрометр3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap штангенциркуль_осн2 {
             get {
                 object obj = ResourceManager.GetObject("штангенциркуль осн2", resourceCulture);
@@ -126,6 +156,16 @@ namespace Labbass_Laba0.Properties {
         internal static System.Drawing.Bitmap штангенциркуль21 {
             get {
                 object obj = ResourceManager.GetObject("штангенциркуль21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Штырь {
+            get {
+                object obj = ResourceManager.GetObject("Штырь", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

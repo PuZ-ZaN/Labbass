@@ -32,18 +32,31 @@ namespace Labbass_Laba0
             {
                 case (char)Keys.A:
                     {
-                        MovableFrame.Location = new Point(MovableFrame.Location.X - 1, MovableFrame.Location.Y);
+                        if(!checkBounds(MeasuringObject.Bounds, MovableFrame.Bounds))
+                            if (MovableFrame.Location.X >= 195)
+                                MovableFrame.Location = new Point(MovableFrame.Location.X - 1, MovableFrame.Location.Y);
                         break;
                     };
                 case (char)Keys.D:
                     {
-                        MovableFrame.Location = new Point(MovableFrame.Location.X + 1, MovableFrame.Location.Y);
+                        if (!checkBounds(MovableFrame.Bounds, MeasuringObject.Bounds))
+                            if (MovableFrame.Location.X < 447)
+                                MovableFrame.Location = new Point(MovableFrame.Location.X + 1, MovableFrame.Location.Y);
                         break;
                     };
                 default:
                     break;
             }
         }
+
+        private bool checkBounds(Rectangle rect1, Rectangle rect2)
+        {
+            Rectangle rect3 = Rectangle.Intersect(rect1, rect2);
+            if (!rect3.IsEmpty)
+                return ((rect1.Width * rect1.Height) / 4) >= rect3.Width * rect3.Height;
+            else return false;
+        }
+
         private void LabForm_Load(object sender, EventArgs e)
         {
             ControlExtension.Draggable(MeasuringObject, true);
@@ -86,6 +99,12 @@ namespace Labbass_Laba0
                 File.WriteAllBytes(saveFileDialog.FileName, Resources.otchet_form);
                 Process.Start(Path.GetDirectoryName(saveFileDialog.FileName));
             }
+        }
+
+        private void MeasuringObject_LocationChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show("dawwadaw");
+            label2.Text = MeasuringObject.Location.X.ToString() + " " + MeasuringObject.Location.Y.ToString();
         }
     }
 }
