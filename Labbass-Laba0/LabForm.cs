@@ -60,7 +60,6 @@ namespace Labbass_Laba0
         private void LabForm_Load(object sender, EventArgs e)
         {
             ControlExtension.Draggable(MeasuringObject, true);
-
             StaticFrame.Controls.Add(MovableFrame);
             MovableFrame.BackColor = Color.Transparent;
             var shtang = Resources.штангенциркуль21;
@@ -69,24 +68,36 @@ namespace Labbass_Laba0
             MovableFrame.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private async void button2_Click_1(object sender, EventArgs e)
         {
-            this.pdfViewer1.LoadFromStream(new MemoryStream(Resources.shtang));
+            //this.pdfViewer1.LoadFromStream(new MemoryStream(Resources.shtang));
+            await LoadPDF(new MemoryStream(Resources.shtang));
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private async void button3_Click(object sender, EventArgs e)
         {
-            this.pdfViewer1.LoadFromStream(new MemoryStream(Resources.micr));
+            //this.pdfViewer1.LoadFromStream(new MemoryStream(Resources.micr));
+            await LoadPDF(new MemoryStream(Resources.micr));
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private async void button4_Click(object sender, EventArgs e)
         {
-            this.pdfViewer1.LoadFromStream(new MemoryStream(Resources.metod));
+            //this.pdfViewer1.LoadFromStream(new MemoryStream(Resources.metod));
+            await LoadPDF(new MemoryStream(Resources.metod));
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private async void button5_Click(object sender, EventArgs e)
         {
-            this.pdfViewer1.LoadFromStream(new MemoryStream(Resources.otchet_form));
+            //this.pdfViewer1.LoadFromStream(new MemoryStream(Resources.otchet_form));
+            await LoadPDF(new MemoryStream(Resources.otchet_form));
+        }
+
+        private Task LoadPDF(MemoryStream sourceStream)
+        {
+            return Task.Run(() =>
+            { 
+                pdfViewer1.Invoke(new Action(() => pdfViewer1.LoadFromStream(sourceStream)));
+            });
         }
 
         private void button6_Click(object sender, EventArgs e)
