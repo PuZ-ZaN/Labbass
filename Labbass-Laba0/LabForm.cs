@@ -68,47 +68,58 @@ namespace Labbass_Laba0
             MovableFrame.SizeMode = PictureBoxSizeMode.Zoom;
         }
 
-        private async void button2_Click_1(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             //this.pdfViewer1.LoadFromStream(new MemoryStream(Resources.shtang));
-            await LoadPDF(new MemoryStream(Resources.shtang));
+            OpenDocumentationRoute(new MemoryStream(Resources.shtang));
         }
 
-        private async void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             //this.pdfViewer1.LoadFromStream(new MemoryStream(Resources.micr));
-            await LoadPDF(new MemoryStream(Resources.micr));
+            OpenDocumentationRoute(new MemoryStream(Resources.micr));
         }
 
-        private async void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             //this.pdfViewer1.LoadFromStream(new MemoryStream(Resources.metod));
-            await LoadPDF(new MemoryStream(Resources.metod));
+            OpenDocumentationRoute(new MemoryStream(Resources.metod));
         }
 
-        private async void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
             //this.pdfViewer1.LoadFromStream(new MemoryStream(Resources.otchet_form));
-            await LoadPDF(new MemoryStream(Resources.otchet_form));
+            OpenDocumentationRoute(new MemoryStream(Resources.otchet_form));
         }
 
-        private Task LoadPDF(MemoryStream sourceStream)
+        private Task LoadPDF(MemoryStream dataSource)
         {
             return Task.Run(() =>
             { 
-                pdfViewer1.Invoke(new Action(() => pdfViewer1.LoadFromStream(sourceStream)));
+                Invoke(new Action(() => pdfViewer1.LoadFromStream(dataSource)));
             });
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private async void OpenDocumentationRoute(MemoryStream dataSource)
+        {
+            if (isOpenInNewWIndowCheckbox.Checked)
+                new DocForm(dataSource).ShowDialog();
+            else
+                await LoadPDF(dataSource);
+        }
+
+        private async void button6_Click(object sender, EventArgs e)
         {
             var saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "PDF файлы(*.pdf) | *.pdf | Все файлы(*.*) | *.* ";
             saveFileDialog.DefaultExt = "pdf";
             if (saveFileDialog.ShowDialog() == DialogResult.OK)
             {
-                File.WriteAllBytes(saveFileDialog.FileName, Resources.otchet_form);
-                Process.Start(Path.GetDirectoryName(saveFileDialog.FileName));
+                await Task.Run(() =>
+                {
+                    File.WriteAllBytes(saveFileDialog.FileName, Resources.otchet_form);
+                    Process.Start(Path.GetDirectoryName(saveFileDialog.FileName));
+                });
             }
         }
 

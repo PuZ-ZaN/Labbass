@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 using LabbassCentral;
 
-[assembly: LabAssemblyInformation("0", "Лаба 0 Штангенциркуль")]
+[assembly: LabAssemblyInformation("0", "Измерение плотности тела идеальной формы")]
 namespace Labbass_Laba0
 {
 

@@ -39,16 +39,17 @@ namespace Labbass_Laba0
             this.button2 = new System.Windows.Forms.Button();
             this.pdfViewer1 = new Spire.PdfViewer.Forms.PdfViewer();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.isOpenInNewWIndowCheckbox = new System.Windows.Forms.CheckBox();
             this.MeasuringObject = new System.Windows.Forms.PictureBox();
             this.MovableFrame = new System.Windows.Forms.PictureBox();
             this.StaticFrame = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -85,6 +86,7 @@ namespace Labbass_Laba0
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.isOpenInNewWIndowCheckbox);
             this.tabPage4.Controls.Add(this.button6);
             this.tabPage4.Controls.Add(this.button5);
             this.tabPage4.Controls.Add(this.button4);
@@ -101,17 +103,17 @@ namespace Labbass_Laba0
             // button6
             // 
             this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(288, 3);
+            this.button6.Location = new System.Drawing.Point(224, 3);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(150, 23);
             this.button6.TabIndex = 6;
-            this.button6.Text = "Сохранить форму отчета";
+            this.button6.Text = "Эскпорт формы отчета";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(172, 3);
+            this.button5.Location = new System.Drawing.Point(108, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(110, 23);
             this.button5.TabIndex = 5;
@@ -131,7 +133,7 @@ namespace Labbass_Laba0
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(669, 3);
+            this.button3.Location = new System.Drawing.Point(495, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(111, 23);
             this.button3.TabIndex = 3;
@@ -141,7 +143,7 @@ namespace Labbass_Laba0
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(554, 3);
+            this.button2.Location = new System.Drawing.Point(380, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 23);
             this.button2.TabIndex = 2;
@@ -180,6 +182,15 @@ namespace Labbass_Laba0
             this.tabPage1.Text = "Штангенциркуль";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(656, 44);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "label2";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -210,6 +221,16 @@ namespace Labbass_Laba0
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Весы";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // isOpenInNewWIndowCheckbox
+            // 
+            this.isOpenInNewWIndowCheckbox.AutoSize = true;
+            this.isOpenInNewWIndowCheckbox.Location = new System.Drawing.Point(613, 6);
+            this.isOpenInNewWIndowCheckbox.Name = "isOpenInNewWIndowCheckbox";
+            this.isOpenInNewWIndowCheckbox.Size = new System.Drawing.Size(153, 17);
+            this.isOpenInNewWIndowCheckbox.TabIndex = 7;
+            this.isOpenInNewWIndowCheckbox.Text = "Открывать в новом окне";
+            this.isOpenInNewWIndowCheckbox.UseVisualStyleBackColor = true;
             // 
             // MeasuringObject
             // 
@@ -272,15 +293,6 @@ namespace Labbass_Laba0
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(656, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "label2";
-            // 
             // LabForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,6 +307,7 @@ namespace Labbass_Laba0
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LabForm_KeyDown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -329,5 +342,6 @@ namespace Labbass_Laba0
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox isOpenInNewWIndowCheckbox;
     }
 }
