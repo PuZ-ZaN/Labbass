@@ -103,7 +103,7 @@ namespace Labbass_Laba0
         private async void OpenDocumentationRoute(MemoryStream dataSource)
         {
             if (isOpenInNewWIndowCheckbox.Checked)
-                new DocForm(dataSource).ShowDialog();
+                new DocForm(dataSource).Show();
             else
                 await LoadPDF(dataSource);
         }
