@@ -97,6 +97,7 @@ namespace Labbass_Laba0
             return Task.Run(() =>
             { 
                 Invoke(new Action(() => pdfViewer1.LoadFromStream(dataSource)));
+                dataSource.Close();
             });
         }
 

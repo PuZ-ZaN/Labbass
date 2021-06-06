@@ -225,7 +225,7 @@ namespace Labbass_Laba0
             // isOpenInNewWIndowCheckbox
             // 
             this.isOpenInNewWIndowCheckbox.AutoSize = true;
-            this.isOpenInNewWIndowCheckbox.Location = new System.Drawing.Point(613, 6);
+            this.isOpenInNewWIndowCheckbox.Location = new System.Drawing.Point(631, 7);
             this.isOpenInNewWIndowCheckbox.Name = "isOpenInNewWIndowCheckbox";
             this.isOpenInNewWIndowCheckbox.Size = new System.Drawing.Size(153, 17);
             this.isOpenInNewWIndowCheckbox.TabIndex = 7;
