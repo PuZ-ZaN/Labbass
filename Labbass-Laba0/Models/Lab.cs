@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using LabbassCentral.Models;
 using LabbassCentral;
 
 [assembly: LabAssemblyInformation("0", "Измерение плотности тела идеальной формы")]
 namespace Labbass_Laba0
 {
-
     class Lab : ILab
     {
         public Lab()

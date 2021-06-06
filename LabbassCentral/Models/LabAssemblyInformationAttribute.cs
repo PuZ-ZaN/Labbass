@@ -5,8 +5,9 @@ namespace LabbassCentral
     [System.AttributeUsage(AttributeTargets.Assembly, Inherited = false, AllowMultiple = false)]
     public class LabAssemblyInformationAttribute : Attribute
     {
-        readonly string labID;
-        readonly string labName;
+        private readonly string labID;
+        private readonly string labName;
+
         public LabAssemblyInformationAttribute(string labID, string labName)
         {
             this.labID = labID;

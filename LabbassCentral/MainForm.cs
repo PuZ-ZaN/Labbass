@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace LabbassCentral
+﻿namespace LabbassCentral
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.IO;
+    using System.Linq;
+    using System.Reflection;
+    using System.Threading;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
+
     public partial class MainForm : Form
     {
-        List<Assembly> assemblies;
+        private List<AssemblyLink> assemblies;
+
         public MainForm()
         {
             InitializeComponent();
@@ -26,35 +24,33 @@ namespace LabbassCentral
         {
             UpdateLabsList();
         }
-        public void UpdateLabsList()
-        {
-            listBox1.Items.Clear();
-            int labCounter = 0;
-            assemblies = new List<Assembly>();
-            foreach (var assembly in LoadAssemblies())
-            {
-                //TODO: костыль, нужно что то типа assembly.CustomAttributes.Where(attr => attr.Type is LabAssemblyInformationAttributes)
-                try
-                {
-                    listBox1.Items.Add(assembly.GetCustomAttribute<LabAssemblyInformationAttribute>()?.LabName);
-                }
-                catch (Exception ex)
-                {
-                    continue;
-                }
 
-                assemblies.Add(assembly);
-                labCounter++;
-            }
-            label1.Text = String.Format("Загружено {0} лабораторных работ", labCounter.ToString());
-        }
-        public IEnumerable<Assembly> LoadAssemblies()
+        private async void UpdateLabsList()
         {
-            var files = Directory.EnumerateFiles(Directory.GetCurrentDirectory());
+            await Task.Run(() =>
+            {
+                Thread.Sleep(10); //Без этого не работает)))
+                button1.Invoke(new Action(() => button1.Enabled = false));
+                listBox1.Invoke(new Action(() => listBox1.Items.Clear()));
+                assemblies = LoadAssemblies(Directory.GetCurrentDirectory()).ToList();
+                assemblies.ForEach(asm => listBox1.Invoke(new Action(() => listBox1.Items.Add(asm))));
+                label1.Invoke(new Action(() => label1.Text = $"Загружено {assemblies.Count} лабораторных работ"));
+                button1.Invoke(new Action(() => button1.Enabled = true));
+            });
+        }
+
+        private IEnumerable<AssemblyLink> LoadAssemblies(string path)
+        {
+            var files = Directory.EnumerateFiles(path);
             foreach (var fileName in files)
             {
-                if (fileName.Substring(fileName.Length - 4) == ".dll")
-                    yield return Assembly.LoadFrom(fileName);
+                if (Path.GetExtension(fileName) == ".dll")
+                {
+                    var assembly = Assembly.LoadFrom(fileName);
+                    var asmAttribute = assembly.GetCustomAttribute<LabAssemblyInformationAttribute>();
+                    if (asmAttribute != null)
+                        yield return new AssemblyLink(asmAttribute, fileName);
+                }
             }
         }
 
@@ -62,13 +58,14 @@ namespace LabbassCentral
         {
             RunLab();
         }
+
         private void RunLab()
         {
-            var labSelectedName = listBox1.SelectedItem?.ToString();
-            if (labSelectedName == null) return;
-            var currentAssembly = assemblies.Where(assembly => assembly.GetCustomAttribute<LabAssemblyInformationAttribute>().LabName == labSelectedName).FirstOrDefault();
-            var name = currentAssembly.DefinedTypes.Where(typeInfo => typeInfo.Name == "Lab").FirstOrDefault().FullName;//FullName!="Lab"
-            var labInstance = currentAssembly.CreateInstance(name) as ILab;
+            var selectedLab = (AssemblyLink)listBox1.SelectedItem;
+            if (selectedLab == null) return;
+
+            var currentAssembly = Assembly.LoadFrom(selectedLab.Path);
+            var labInstance = Activator.CreateInstance(currentAssembly.GetTypes().Where(type => type.GetInterface(nameof(ILab)) != null).First()) as ILab;
             var LabThread = new Thread(() => labInstance.Show());
             this.WindowState = FormWindowState.Minimized;
             LabThread.SetApartmentState(ApartmentState.STA);
@@ -77,5 +74,4 @@ namespace LabbassCentral
             this.WindowState = FormWindowState.Normal;
         }
     }
-
 }
