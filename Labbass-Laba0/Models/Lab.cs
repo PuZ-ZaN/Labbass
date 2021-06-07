@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using LabbassCentral.Models;
 using LabbassCentral;
 
 [assembly: LabAssemblyInformation("0", "Измерение плотности тела идеальной формы")]
