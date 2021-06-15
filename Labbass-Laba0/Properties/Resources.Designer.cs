@@ -61,6 +61,66 @@ namespace Labbass_Laba0.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_ABS {
+            get {
+                object obj = ResourceManager.GetObject("BTN_ABS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_MM_IN {
+            get {
+                object obj = ResourceManager.GetObject("BTN_MM_IN", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_ON_OFF {
+            get {
+                object obj = ResourceManager.GetObject("BTN_ON_OFF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BTN_SET {
+            get {
+                object obj = ResourceManager.GetObject("BTN_SET", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CylinderFront {
+            get {
+                object obj = ResourceManager.GetObject("CylinderFront", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap magicImage {
+            get {
+                object obj = ResourceManager.GetObject("magicImage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Byte[].
         /// </summary>
         internal static byte[] metod {
@@ -77,6 +137,26 @@ namespace Labbass_Laba0.Properties {
             get {
                 object obj = ResourceManager.GetObject("micr", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap micro_axis {
+            get {
+                object obj = ResourceManager.GetObject("micro_axis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap micro_body {
+            get {
+                object obj = ResourceManager.GetObject("micro_body", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

@@ -151,4 +151,28 @@
   <data name="Штырь" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Штырь.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="BTN_ABS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTN_ABS.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BTN_MM_IN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTN_MM_IN.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BTN_ON_OFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTN_ON_OFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BTN_SET" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BTN_SET.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="micro_body" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\micro_body.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="micro_axis" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\микрометр измер3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CylinderFront" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CylinderFront.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magicImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magicImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

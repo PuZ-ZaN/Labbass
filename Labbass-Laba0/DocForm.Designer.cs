@@ -1,4 +1,6 @@
-﻿
+﻿#pragma warning disable CS0618
+
+
 namespace Labbass_Laba0
 {
     partial class DocForm

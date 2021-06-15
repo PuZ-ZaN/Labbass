@@ -64,6 +64,7 @@
     <Compile Include="DocForm.Designer.cs">
       <DependentUpon>DocForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Extensions.cs" />
     <Compile Include="Models\Lab.cs" />
     <Compile Include="LabForm.cs">
       <SubType>Form</SubType>
@@ -77,6 +78,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Service\PrecisionLevel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DocForm.resx">
@@ -121,6 +123,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\итог3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_MM_IN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_ON_OFF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_SET.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\micro_body.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BTN_ABS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\микрометр измер3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magicImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CylinderFront.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
