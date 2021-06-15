@@ -30,7 +30,7 @@
   * Язык C#
   * .NET Framework 4.7.2
 ### LabbassCentral:
-  * Microsoft WPF 
+  * Microsoft Windows Forms
 ### Демонстрационная лабораторная работа:
   * Windows Forms
   * Spire PDF Library for .NET Framework
